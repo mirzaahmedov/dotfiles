@@ -1,5 +1,7 @@
 vim.g.mapleader = " "
 
+vim.g.NERDTreeShowLineNumbers = 1
+
 vim.cmd([[colorscheme nightfox]])
 
 -- line numbers
@@ -11,6 +13,7 @@ vim.opt.expandtab = true
 vim.opt.shiftwidth = 2
 vim.opt.softtabstop = 2
 vim.opt.encoding = 'utf-8'
+vim.opt.autoindent = true
 vim.opt.smartindent = true
 
 -- highlight current line

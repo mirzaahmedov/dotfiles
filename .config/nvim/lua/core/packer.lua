@@ -66,4 +66,8 @@ return require('packer').startup(function(use)
   use 'christoomey/vim-tmux-navigator'
   use 'szw/vim-maximizer'
   use 'tpope/vim-surround'
+
+  -- status line
+  use 'vim-airline/vim-airline'
+  use 'vim-airline/vim-airline-themes'
 end)
