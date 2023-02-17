@@ -1,0 +1,59 @@
+@define-color al #000000;
+@define-color bg #1a1b26;
+@define-color bga #414868;
+@define-color fga #c0caf5;
+@define-color fg #c0caf5;
+@define-color ac #343b58;
+
+
+window {
+	border: none;
+	background-color: transparent;
+}
+
+
+#input {
+	padding: 15px 10px;
+	font-size: 30px;
+  background-color: @bga;
+	color: @fg;
+	border: none;
+	border-radius: 0;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+#input:focus {
+	border: 1px solid transparent;
+}
+#input > image.left {
+	min-width: 1.5em;
+	-gtk-icon-transform:scale(1.3);
+}
+
+#outer-box {
+  background-color: @al;
+	border-radius: 10px;
+}
+
+#entry {
+	margin: 0;
+	padding: 14px;
+	font-size: 15px;
+	color: @fga;
+}
+#entry image {
+  margin-right: 10px;
+}
+#entry:selected {
+	color: @fg;
+	background-color: @ac;
+}
+
+
+#scroll {
+  margin: 2px;
+}
+
+#text {
+  color: @fg;
+} 

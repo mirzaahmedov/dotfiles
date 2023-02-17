@@ -1,0 +1,10 @@
+show=drun
+term=alacritty
+prompt=Search...
+hide-scroll=true
+gtk-dark=true
+image_size=24
+insensitive=true
+allow_images=true
+allow_markup=true
+no_actions=true
