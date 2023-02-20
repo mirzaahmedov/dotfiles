@@ -1,0 +1,148 @@
+@define-color bg-bar rgba(13, 13, 13, 0.8);
+@define-color text-color #BFBFBF;
+@define-color accent-color #FA580D;
+
+#waybar {
+  font-family: "SF UI Text", "Font Awesome 6 Free";
+  font-size: 15px;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  text-shadow: none;
+  transition-duration: 0s;
+  color: @text-color;
+  background: @bg-bar; 
+}
+
+#workspaces {
+  margin: 0 5px;
+}
+
+#workspaces button {
+  color: inherit;
+}
+
+#workspaces button.focused {
+  color: @accent-color;
+}
+
+/* #workspaces button { */
+/*   padding: 0 10px; */
+/*   border-radius: 10px; */
+/*   min-width: 33px; */
+/*   font-size: 16px; */
+/* } */
+/**/
+/* #workspaces button.visible { */
+/*   color: #a9b1d6; */
+/* } */
+/**/
+/* #workspaces button.focused { */
+/*   color: #007aff; */
+/* } */
+/**/
+/* #workspaces button.urgent { */
+/*   background-color: #a96d1f; */
+/*   color: white; */
+/* } */
+/**/
+/* #workspaces button:hover { */
+/*   box-shadow: inherit; */
+/*   border-color: #bb9af7; */
+/*   color: #bb9af7; */
+/* } */
+
+/* Repeat style here to ensure properties are overwritten as there's no !important and button:hover above resets the colour */
+
+/* #workspaces button.focused { */
+/*   color: #7aa2f7; */
+/* } */
+/* #workspaces button.focused:hover { */
+/*   color: #bb9af7; */
+/* } */
+
+#pulseaudio {
+  /* font-size: 26px; */
+}
+
+#custom-recorder {
+  font-size: 18px;
+  margin: 2px 7px 0px 7px;
+  color:#ee2e24;
+}
+#custom-powermenu {
+  padding: 0 10px;
+  background: @accent-color;
+  font-size: 15px;
+}
+
+#tray,
+#mode,
+#battery,
+#temperature,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#idle_inhibitor,
+#sway-language,
+#backlight,
+#custom-storage,
+#custom-cpu_speed,
+#custom-spotify,
+#custom-weather,
+#custom-mail,
+#custom-media {
+  /* margin: 0px 0px 0px 10px; */
+  /* padding: 0 5px; */
+  /* border-top: 3px solid rgba(217, 216, 216, 0.5); */
+}
+
+#clock {
+  /* padding: 0px 10px; */
+  font-size: 1.2rem;
+}
+
+#battery.warning {
+  color: rgba(255, 210, 4, 1);
+}
+
+#battery.critical {
+  color: rgba(238, 46, 36, 1);
+}
+
+#battery.charging {
+  color: rgba(217, 216, 216, 1);
+}
+
+#custom-storage.warning {
+  color: rgba(255, 210, 4, 1);
+}
+
+#custom-storage.critical {
+  color: rgba(238, 46, 36, 1);
+}
+
+#custom-launcher {
+  /* padding: 0 10px; */
+  color: #565f89;
+  border-radius: 10px;
+  min-width: 33px;
+}
+#custom-launcher:hover {
+  box-shadow: inherit;
+  border-color: #bb9af7;
+  color: #bb9af7;
+}
+#custom-launcher.focused:hover {
+  color: #bb9af7;
+  border-color: #bb9af7;
+  color: red;
+}
+
+@keyframes blink {
+  to {
+    background-color: #ffffff;
+    color: black;
+  }
+}
