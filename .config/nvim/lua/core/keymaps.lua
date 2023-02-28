@@ -22,3 +22,6 @@ vim.keymap.set('n', '<leader>tp', ':tabp<CR>')
 
 -- split windows
 vim.keymap.set('n', '<leader>tf', ':MaximizerToggle<CR>')
+
+-- github copilot keymaps
+vim.api.nvim_set_keymap("i", "kj", 'copilot#Accept("<CR>")', { silent = true, expr = true })

@@ -28,3 +28,6 @@ vim.opt.smartcase = true
 
 -- true colors
 vim.opt.termguicolors = true
+
+-- github copilot
+vim.g.copilot_no_tab_map = true
