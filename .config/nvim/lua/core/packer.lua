@@ -12,6 +12,8 @@ return require('packer').startup(function(use)
 
   -- NightFox theme
   use 'EdenEast/nightfox.nvim'
+  -- Using Packer
+  use 'navarasu/onedark.nvim'
 
   -- Comments
   use {

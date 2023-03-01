@@ -2,7 +2,11 @@ vim.g.mapleader = " "
 
 vim.g.NERDTreeShowLineNumbers = 1
 
-vim.cmd([[colorscheme nightfox]])
+-- OneDark theme
+require('onedark').setup{
+  style = 'warm',
+}
+require('onedark').load()
 
 -- line numbers
 vim.opt.number = true
