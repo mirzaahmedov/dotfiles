@@ -17,4 +17,6 @@ if status is-interactive
     alias c:fish='vim .config/fish/config.fish'
     alias c:sway='vim .config/sway/config'
     alias c:waybar='vim .config/waybar/config'
+    
+    alias screenshot='$HOME/bin/screenshot.sh'
 end

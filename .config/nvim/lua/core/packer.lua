@@ -75,4 +75,8 @@ return require('packer').startup(function(use)
   -- status line
   use 'vim-airline/vim-airline'
   use 'vim-airline/vim-airline-themes'
+
+  -- multi cursor
+  use 'terryma/vim-multiple-cursors'
+
 end)

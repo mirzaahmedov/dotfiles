@@ -23,5 +23,8 @@ vim.keymap.set('n', '<leader>tp', ':tabp<CR>')
 -- split windows
 vim.keymap.set('n', '<leader>tf', ':MaximizerToggle<CR>')
 
+-- rename symbols
+vim.keymap.set('n', '<leader>rn', ':lua vim.lsp.buf.rename()<CR>')
+
 -- github copilot keymaps
 vim.api.nvim_set_keymap("i", "kj", 'copilot#Accept("<CR>")', { silent = true, expr = true })
