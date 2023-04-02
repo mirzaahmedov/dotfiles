@@ -23,9 +23,11 @@ set $menu wofi | xargs swaymsg exec --
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # output * bg #ffffff solid_color
-output * bg /home/mirzaahmedov/.system/wallpaper/landscape_wallpaper.jpg fill
-output HDMI-A-1 resolution 1920x1080 position 0 0
-output VGA-1 resolution --custom 1920x1080 position 1920 0
+output {
+  HDMI-A-1 resolution 1920x1080 position 0 0
+  VGA-1 resolution --custom 1920x1080 position 1920 0
+  * bg /home/mirzaahmedov/.system/wallpaper/landscape_wallpaper.jpg fill
+}
 #
 # Example configuration:
 #
@@ -238,6 +240,11 @@ gaps outer 5
 set $gnome-schema org.gnome.desktop.interface
 
 exec_always stretchly &
+
+input {
+  2:8:AlpsPS/2_ALPS_DualPoint_Stick events disabled
+  2:8:AlpsPS/2_ALPS_DualPoint_TouchPad events disabled
+}
 
 exec_always {
     gsettings set $gnome-schema gtk-theme 'Adapta-Nokto-Eta'

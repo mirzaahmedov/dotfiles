@@ -39,4 +39,13 @@ matches:
 
   - trigger: ":github"
     replace: "https://github.com/mirzaahmedov/mirzaahmedov"
+
+  - trigger: ":me-full"
+    replace: "Mirzaahmedov Bekzod"
+
+  - trigger: ":me-name"
+    replace: "Bekzod"
+
+  - trigger: ":email"
+    replace: "mirzaahmedov.dev@gmail.com"
   # And much more! For more information, visit the docs: https://espanso.org/docs/
