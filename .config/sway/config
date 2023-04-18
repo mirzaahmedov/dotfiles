@@ -239,6 +239,11 @@ set $gnome-schema org.gnome.desktop.interface
 
 exec_always stretchly &
 
+input {
+  2:8:AlpsPS/2_ALPS_DualPoint_Stick events disabled
+  2:8:AlpsPS/2_ALPS_DualPoint_TouchPad events disabled
+}
+
 exec_always {
     gsettings set $gnome-schema gtk-theme 'Adapta-Nokto-Eta'
     gsettings set $gnome-schema icon-theme 'Papirus-Dark'
