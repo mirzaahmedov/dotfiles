@@ -231,8 +231,8 @@ default_border pixel 4
 #exec --no-startup-id nm-applet
 #exec --no-startup-id redshift
 xwayland enable
-gaps inner 15
-gaps outer 5
+# gaps inner 15
+# gaps outer 5
 #exec --no-startup-id swayidle -w timeout 300 'swaylock -f'
 
 # fix gtk theme issue
