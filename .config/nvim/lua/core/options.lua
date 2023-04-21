@@ -3,7 +3,7 @@ vim.g.mapleader = " "
 vim.g.NERDTreeShowLineNumbers = 1
 
 -- OneDark theme
-require('onedark').setup{
+require('onedark').setup {
   style = 'warm',
 }
 require('onedark').load()
@@ -35,3 +35,6 @@ vim.opt.termguicolors = true
 
 -- github copilot
 vim.g.copilot_no_tab_map = true
+
+-- format on save
+vim.cmd [[autocmd BufWritePre * Neoformat]]

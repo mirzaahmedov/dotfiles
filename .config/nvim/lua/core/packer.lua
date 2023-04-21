@@ -79,4 +79,6 @@ return require('packer').startup(function(use)
   -- multi cursor
   use 'terryma/vim-multiple-cursors'
 
+  -- prettier
+  use 'sbdchd/neoformat'
 end)
