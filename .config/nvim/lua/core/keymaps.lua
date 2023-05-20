@@ -28,3 +28,6 @@ vim.keymap.set('n', '<leader>rn', ':lua vim.lsp.buf.rename()<CR>')
 
 -- github copilot keymaps
 vim.api.nvim_set_keymap("i", "kj", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+
+-- toggle terminal
+vim.keymap.set('n', '<leader>`', ':ToggleTerm<CR>')

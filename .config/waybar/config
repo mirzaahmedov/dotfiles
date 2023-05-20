@@ -1,21 +1,27 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 20,
-    "spacing": 15,
+    "height": 30,
+    "spacing": 7,
     "fixed-center": false,
     "modules-left": [],
     "modules-center": ["sway/workspaces", "sway/mode"],
-    "modules-right": ["pulseaudio", "tray", "idle_inhibitor", "network", "cpu", "battery", "clock", "custom/powermenu"],
+    "modules-right": ["cpu", "idle_inhibitor", "tray", "sway/language", "pulseaudio", "network",  "battery", "clock", "custom/powermenu"],
     "sway/workspaces": {
       "disable-scroll": true,
       "all-outputs": false,
-      "format": "<big>{icon}</big>: {name}", 
+      "format": "<big>{icon}</big> #{name}", 
       "format-icons": {
-        "urgent": "",
-        "focused": "",
-        "default": ""
-      }
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": "",
+        "5": "",
+        "6": "",
+        "urgent": "",
+        "focused": "",
+        "default": ""
+      },
     },
 
     "idle_inhibitor": {
@@ -29,20 +35,24 @@
     "sway/mode": {
       "format": "<span style=\"italic\">{}</span>"
     },
+    "sway/language": {
+      "format": "<span style=\"italic\">{short}</span> {flag}",
+      "on-click": "swaymsg input type:keyboard xkb_switch_layout next",
+    },
     "tray": {
-      "icon-size": 14,
-      "spacing": 0
+      "icon-size": 18,
+      "spacing": 4
     },
     "clock": {
       // Human Friendly
-      "format": "{:%H:%M %p}",
+      "format": " {:%H:%M %p}",
       // 24hr Robot Friendly
       "format-alt": "{:%Y/%m/%d}"
     },
     "cpu": {
       "format": "",
       "formal-alt": " {usage}%",
-      // "on-click": "alacritty -t 'Floating Terminal' -e htop"
+      "on-click": "kitty -e htop"
     },
 
     "memory": {
@@ -73,6 +83,19 @@
       },
       "on-click": "pavucontrol"
     },
+    "battery": {
+      "bat": "BAT0",
+      "interval": 60,
+      "states": {
+        "warning": 30,
+        "critical": 15,
+      },
+      "format": "{icon} {capacity}%",
+      "format-charging": " {capacity}%",
+      "format-plugged": " {capacity}%",
+      "format-icons": ["", "", "", "", ""],
+      "max-length": 25
+    },
     "custom/music": {
       "format": "  {}",
       "max-length": 60,
@@ -84,7 +107,8 @@
       "on-scroll-down": "playerctl next"
     },
     "custom/powermenu": {
-      "format": ""
+      "format": "",
+      "on-click": "$HOME/.config/waybar/powermenu.sh"
     },
     "custom/launcher": {
       "format": "<big></big>  Menu",

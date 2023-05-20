@@ -23,7 +23,7 @@ set $menu wofi | xargs swaymsg exec --
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # output * bg #ffffff solid_color
-output * bg /home/mirzaahmedov/.system/wallpaper/wallpaper.jpg fill
+output * bg /home/mirzaahmedov/.system/wallpaper/catppuccin_02.png fill
 output HDMI-A-1 resolution 1920x1080 position 0 0
 output VGA-1 resolution --custom 1920x1080 position 1920 0
 #
@@ -66,6 +66,10 @@ output VGA-1 resolution --custom 1920x1080 position 1920 0
 #
     # Start a terminal
     bindsym $mod+Return exec $term
+
+    # Screenshot
+    bindsym $mod+p exec grim -g "$(slurp)" screenshot.png
+    bindsym $mod+Shift+p exec grim -g "0,0 1920x1080" screenshot.png
 
     # Kill focused window
     bindsym $mod+Shift+q kill
@@ -236,18 +240,24 @@ xwayland enable
 #exec --no-startup-id swayidle -w timeout 300 'swaylock -f'
 
 # fix gtk theme issue
-set $gnome-schema org.gnome.desktop.interface
+exec_always $HOME/import-gsettings.sh
 
+# run stretchly in background
 exec_always stretchly &
+
+# run chrome in workspace 1
+assign [class="Google-chrome"] workspace number 1
 
 input {
   2:8:AlpsPS/2_ALPS_DualPoint_Stick events disabled
   2:8:AlpsPS/2_ALPS_DualPoint_TouchPad events disabled
 }
-
-exec_always {
-    gsettings set $gnome-schema gtk-theme 'Adapta-Nokto-Eta'
-    gsettings set $gnome-schema icon-theme 'Papirus-Dark'
-    gsettings set $gnome-schema cursor-theme 'Pop'
-    gsettings set $gnome-schema font-name 'SF UI Text'
+input type:touchpad {
+  tap enabled
+  natural_scroll enabled
+}
+input * {
+    xkb_layout "us,ru"
+    xkb_variant ""
+    xkb_options "grp:alt_space_toggle"
 }
