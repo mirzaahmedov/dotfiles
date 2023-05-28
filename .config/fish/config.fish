@@ -3,6 +3,7 @@ if status is-interactive
     set PATH $HOME/.local/bin $PATH
     set PATH $HOME/bin $PATH
     set PATH $HOME/.local/share/pnpm $PATH
+    set PATH $HOME/bin $PATH
 
     export EDITOR=nvim
     export VISUAL=nvim
@@ -21,5 +22,8 @@ if status is-interactive
     alias c:waybar='vim .config/waybar/config'
 
     alias screenshot='$HOME/bin/screenshot.sh'
+
     alias pn='pnpm'
+    alias pc='sudo pacman'
+
 end
