@@ -15,11 +15,20 @@ alias pull='git pull origin'
 alias push='git push origin'
 
 export PATH=$PATH:$HOME/go/bin
+export _JAVA_AWT_WM_NONREPARENTING=1
 
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
 sway
 fi
 
-# PS1='[\u@\h \W]\$ '
-PS1=' \[\e[00;34m\]λ \W \[\e[0m\]'
-. "$HOME/.cargo/env"
+# pnpm
+export PNPM_HOME="/home/mirzaahmedov/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

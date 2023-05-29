@@ -4,25 +4,43 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
-  -- Github copilot
-  use 'github/copilot.vim'
-
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
-  -- NightFox theme
+  -- CSS colors
+  use 'ap/vim-css-color'
+
+  -- Github copilot
+  use 'github/copilot.vim'
+
+  -- NightFox color scheme
   use 'EdenEast/nightfox.nvim'
-  -- Using Packer
+  -- NV Code color scheme
+  use 'christianchiarulli/nvcode-color-schemes.vim'
+  -- Sonokai color scheme
+  use 'sainnhe/sonokai'
+  -- Edge color scheme
+  use 'sainnhe/edge'
+  -- Darcula color scheme
+  use 'doums/darcula'
+  -- Tokyodark color scheme
+  use 'tiagovla/tokyodark.nvim'
+  -- Vscode color scheme
+  use 'Mofiqul/vscode.nvim'
+  -- One dark color scheme
   use 'navarasu/onedark.nvim'
+  -- Nebulous color scheme
+  use 'Yagua/nebulous.nvim'
 
   -- Comments
   use {
     'numToStr/Comment.nvim',
     config = function()
-        require('Comment').setup()
+      require('Comment').setup()
     end
   }
   use 'JoosepAlviste/nvim-ts-context-commentstring'
+  use 'mxw/vim-jsx'
 
   -- Nerd Tree
   use 'preservim/nerdtree'
@@ -38,21 +56,21 @@ return require('packer').startup(function(use)
     branch = 'v1.x',
     requires = {
       -- LSP Support
-      {'neovim/nvim-lspconfig'},             -- Required
-      {'williamboman/mason.nvim'},           -- Optional
-      {'williamboman/mason-lspconfig.nvim'}, -- Optional
+      { 'neovim/nvim-lspconfig' },           -- Required
+      { 'williamboman/mason.nvim' },         -- Optional
+      { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
       -- Autocompletion
-      {'hrsh7th/nvim-cmp'},         -- Required
-      {'hrsh7th/cmp-nvim-lsp'},     -- Required
-      {'hrsh7th/cmp-buffer'},       -- Optional
-      {'hrsh7th/cmp-path'},         -- Optional
-      {'saadparwaiz1/cmp_luasnip'}, -- Optional
-      {'hrsh7th/cmp-nvim-lua'},     -- Optional
+      { 'hrsh7th/nvim-cmp' },       -- Required
+      { 'hrsh7th/cmp-nvim-lsp' },   -- Required
+      { 'hrsh7th/cmp-buffer' },     -- Optional
+      { 'hrsh7th/cmp-path' },       -- Optional
+      { 'saadparwaiz1/cmp_luasnip' }, -- Optional
+      { 'hrsh7th/cmp-nvim-lua' },   -- Optional
 
       -- Snippets
-      {'L3MON4D3/LuaSnip'},             -- Required
-      {'rafamadriz/friendly-snippets'}, -- Optional
+      { 'L3MON4D3/LuaSnip' },           -- Required
+      { 'rafamadriz/friendly-snippets' }, -- Optional
     }
   }
 
@@ -64,7 +82,7 @@ return require('packer').startup(function(use)
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.1',
     -- or                          , branch = '0.1.x',
-    requires = { {'nvim-lua/plenary.nvim'} }
+    requires = { { 'nvim-lua/plenary.nvim' } }
   }
 
   -- split windows
@@ -79,6 +97,24 @@ return require('packer').startup(function(use)
   -- multi cursor
   use 'terryma/vim-multiple-cursors'
 
-  -- prettier
+  -- prettier extension
   use 'sbdchd/neoformat'
+
+  -- toggleterm plugin
+  use { "akinsho/toggleterm.nvim", tag = '*', config = function()
+    require("toggleterm").setup()
+  end }
+
+  -- dev icons
+  use 'nvim-tree/nvim-web-devicons'
+
+  -- oil.nvim file manager
+  -- use {
+  --   'stevearc/oil.nvim',
+  --   config = function() require('oil').setup({
+  --     columns = {
+  --       "icon",
+  --     }
+  --   }) end
+  -- }
 end)
