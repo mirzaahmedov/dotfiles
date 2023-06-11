@@ -37,14 +37,26 @@ matches:
   - trigger: ":salom"
     replace: "Assalom aleykum"
 
-  - trigger: ":github"
+  - trigger: ":git"
     replace: "https://github.com/mirzaahmedov/mirzaahmedov"
 
-  - trigger: ":me-full"
+  - trigger: ":in"
+    replace: "https://linkedin.com/in/mirzaahmedov"
+
+  - trigger: ":me"
     replace: "Mirzaahmedov Bekzod"
 
-  - trigger: ":me-name"
+  - trigger: ":name"
     replace: "Bekzod"
+
+  - trigger: ":lastname"
+    replace: "Mirzaahmedov"
+
+  - trigger: ":hi"
+    replace: "Hi, "
+
+  - trigger: ":hello"
+    replace: "Hello, "
 
   - trigger: ":email"
     replace: "mirzaahmedov.dev@gmail.com"
