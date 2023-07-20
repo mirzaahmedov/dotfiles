@@ -4,6 +4,13 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
+  -- VimBeGood
+  use 'ThePrimeagen/vim-be-good'
+
+  -- ColorBuddy
+  -- use 'tjdevries/colorbuddy.nvim'
+  -- use 'svrana/neosolarized.nvim'
+
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
@@ -86,7 +93,7 @@ return require('packer').startup(function(use)
   }
 
   -- split windows
-  use 'christoomey/vim-tmux-navigator'
+--  use 'christoomey/vim-tmux-navigator'
   use 'szw/vim-maximizer'
   use 'tpope/vim-surround'
 
@@ -99,11 +106,6 @@ return require('packer').startup(function(use)
 
   -- prettier extension
   use 'sbdchd/neoformat'
-
-  -- toggleterm plugin
-  use { "akinsho/toggleterm.nvim", tag = '*', config = function()
-    require("toggleterm").setup()
-  end }
 
   -- dev icons
   use 'nvim-tree/nvim-web-devicons'

@@ -12,6 +12,24 @@ matches:
   - trigger: ":espanso"
     replace: "Hi there!"
 
+  - trigger: ":5173"
+    replace: "http://localhost:5173"
+
+  - trigger: ":3000"
+    replace: "http://localhost:3000"
+
+  - trigger: ":in"
+    replace: "https://linkedin.con"
+
+  - trigger: ":yt"
+    replace: "https://youtube.com"
+
+  - trigger: ":upwork"
+    replace: "https://upwork.com"
+
+  - trigger: ":mail"
+    replace: "https://mail.google.com"
+
   # NOTE: espanso uses YAML to define matches, so pay attention to the indentation!
 
   # But matches can also be dynamic:
@@ -33,6 +51,14 @@ matches:
         type: shell
         params:
           cmd: "echo 'Hello from your shell'"
+
+  - trigger: ":paste"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "wl-paste"
 
   - trigger: ":salom"
     replace: "Assalom aleykum"

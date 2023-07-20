@@ -8,7 +8,7 @@
 #
 # Logo key. Use Mod1 for Alt.
 # Logo key. Use Mod4 for Win.
-set $mod Mod1
+set $mod Mod4
 # Home row direction keys, like vim
 set $left h
 set $down j
@@ -25,8 +25,8 @@ set $menu wofi | xargs swaymsg exec --
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # output * bg #ffffff solid_color
 output * bg /home/mirzaahmedov/.system/wallpaper/catppuccin_02.png fill
-output HDMI-A-1 resolution 1920x1080 position 0 0
-output VGA-1 resolution --custom 1920x1080 position 1920 0
+# output HDMI-A-1 resolution 1920x1080 position 0 0
+# output VGA-1 resolution --custom 1920x1080 position 1920 0
 #
 # Example configuration:
 #
@@ -77,7 +77,11 @@ output VGA-1 resolution --custom 1920x1080 position 1920 0
 
     # Start your launcher
     bindsym $mod+d exec $menu
-    bindsym $mod+Shift+n exec $term -e nvim
+    bindsym $mod+Shift+s exec $HOME/.scripts/wofi-powermenu.sh
+    bindsym $mod+Shift+b exec brave
+    bindsym $mod+Shift+t exec telegram-desktop
+    bindsym $mod+Shift+r exec $term -e ranger
+    bindsym $mod+Shift+n exec $term -e tmux
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -118,6 +122,8 @@ output VGA-1 resolution --custom 1920x1080 position 1920 0
 #
 # Workspaces:
 #
+    bindsym $mod+Ctrl+l workspace next
+    bindsym $mod+Ctrl+h workspace prev
     # Switch to workspace
     bindsym $mod+1 workspace 1
     bindsym $mod+2 workspace 2
@@ -247,7 +253,9 @@ exec_always $HOME/import-gsettings.sh
 exec_always stretchly &
 
 # run chrome in workspace 1
-assign [class="Google-chrome"] workspace number 1
+assign [app_id="Alacritty"] workspace number 1
+assign [class="Brave-browser"] workspace number 2
+assign [app_id="org.telegram.desktop"] workspace number 3
 
 input {
   2:8:AlpsPS/2_ALPS_DualPoint_Stick events disabled
@@ -260,5 +268,5 @@ input type:touchpad {
 input * {
     xkb_layout "us,ru"
     xkb_variant ""
-    xkb_options "grp:alt_space_toggle"
+    xkb_options "grp:win_space_toggle"
 }

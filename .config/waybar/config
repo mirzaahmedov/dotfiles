@@ -6,21 +6,18 @@
     "fixed-center": false,
     "modules-left": [],
     "modules-center": ["sway/workspaces", "sway/mode"],
-    "modules-right": ["cpu", "idle_inhibitor", "tray", "sway/language", "pulseaudio", "network",  "battery", "clock", "custom/powermenu"],
+    "modules-right": ["tray", "keyboard-state", "sway/language", "pulseaudio", "network",  "battery", "clock", "custom/powermenu"],
     "sway/workspaces": {
       "disable-scroll": true,
       "all-outputs": false,
       "format": "<big>{icon}</big> #{name}", 
       "format-icons": {
-        "1": "",
-        "2": "",
-        "3": "",
-        "4": "",
-        "5": "",
-        "6": "",
-        "urgent": "",
-        "focused": "",
-        "default": ""
+        "1": "󰅭",
+        "2": "",
+        "3": "",
+        "4": "",
+        "urgent": "",
+        "default": "",
       },
     },
 
@@ -35,9 +32,23 @@
     "sway/mode": {
       "format": "<span style=\"italic\">{}</span>"
     },
+    "keyboard-state": {
+        "capslock": true,
+        "format": {
+            "capslock": "{icon}",
+        },
+        "format-icons": {
+            "unlocked": "",
+            "locked": "󰪛 "
+        }
+    },
     "sway/language": {
-      "format": "<span style=\"italic\">{short}</span> {flag}",
+      "format": "{long}",
       "on-click": "swaymsg input type:keyboard xkb_switch_layout next",
+      "format-flags": {
+        "ru": "󱌭",
+        "en": "󱌯",
+      }
     },
     "tray": {
       "icon-size": 18,
@@ -52,7 +63,7 @@
     "cpu": {
       "format": "",
       "formal-alt": " {usage}%",
-      "on-click": "kitty -e htop"
+      "on-click": "kitty -e bpytop"
     },
 
     "memory": {

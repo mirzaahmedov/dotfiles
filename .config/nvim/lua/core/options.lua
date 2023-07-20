@@ -2,6 +2,8 @@ vim.g.mapleader = ","
 
 vim.g.NERDTreeShowLineNumbers = 1
 
+vim.g.neoformat_only_msg_on_error = 1
+
 -- line numbers
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -16,7 +18,6 @@ vim.opt.smartindent = true
 
 -- highlight current line
 vim.opt.cursorline = true
-
 -- line wrap
 vim.opt.wrap = false
 
@@ -29,6 +30,9 @@ vim.opt.termguicolors = true
 
 -- github copilot
 vim.g.copilot_no_tab_map = true
+
+-- max width indicator
+vim.opt.colorcolumn = "100"
 
 -- format on save
 vim.cmd "autocmd BufWritePre * Neoformat"
@@ -45,18 +49,17 @@ vim.cmd "autocmd BufWritePre * Neoformat"
 -- vim.cmd "colorscheme edge"
 
 -- Nebulous colorscheme
-require("nebulous").setup {
-  variant = "fullmoon",
-  disable = {
-    terminal_colors = true,
-  },
-  italic = {
-    comments   = false,
-    keywords   = true,
-    functions  = false,
-    variables  = true,
-  },
-}
+-- require("nebulous").setup {
+--   variant = "fullmoon",
+--   disable = {
+--     terminal_colors = true,
+--   },
+--   italic = {
+--     comments   = false,
+--     keywords   = true,
+--     functions  = false,
+--     variables  = true,
+--   },
+-- }
 
--- Toggle terminal
-vim.opt.shell = '/usr/bin/fish'
+vim.cmd "colorscheme rose-pine"

@@ -1,7 +1,7 @@
 @import "catppuccin/themes/mocha.css";
 
 * {
-  font-family: Inconsolata, "FontAwesome 6 Free Solid", sans-serif;
+  font-family: "Inconsolata", "FontAwesome 6 Free Solid", sans-serif;
   font-size: 16px;
   min-height: 0;
 }
@@ -22,7 +22,7 @@ window#waybar > *:last-child {
 }
 
 #workspaces button {
-  color: @pink;
+  color: @subtext1;
   border-radius: 1rem;
   padding-left: 10px;
   margin: 5px 0;
@@ -32,10 +32,9 @@ window#waybar > *:last-child {
 }
 
 #workspaces button.focused {
-  color: @blue;
+  color: @teal;
   border-radius: 1rem;
 }
-
 #workspaces button:hover {
   color: @lavender;
   border-radius: 1rem;
@@ -54,6 +53,10 @@ window#waybar > *:last-child {
   margin: 7px 0px;
   padding: 10px 10px 10px 10px;
   border-radius: 2rem;
+}
+
+#language {
+  background-color: transparent;
 }
 
 #clock {
