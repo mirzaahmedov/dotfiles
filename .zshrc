@@ -70,21 +70,13 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colored-man-pages colorize zsh-syntax-highlighting zsh-autosuggestions)
 
-source $ZSH/oh-my-zsh.sh
-
-if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
-sway
+if [ -f ~/.zsh-options ]
+then
+	source ~/.zsh-options
 fi
 
-alias ls='ls --color -a'
-alias cd..='cd ..'
-alias cd...='cd ../..'
-alias cd....='cd ../../..'
-alias cd.....='cd ../../../..'
-
-alias vim='nvim'
+source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -112,8 +104,6 @@ alias vim='nvim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-bindkey -v
-bindkey -M viins ';j' vi-cmd-mode
 
 # pnpm
 export PNPM_HOME="/home/mirzaahmedov/.local/share/pnpm"
@@ -122,3 +112,8 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+if [ -f ~/.zsh-aliases ]
+then
+	source ~/.zsh-aliases
+fi
