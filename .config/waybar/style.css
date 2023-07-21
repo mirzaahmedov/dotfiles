@@ -22,7 +22,6 @@ window#waybar > *:last-child {
 }
 
 #workspaces button {
-  color: @subtext1;
   border-radius: 1rem;
   padding-left: 10px;
   margin: 5px 0;
@@ -56,6 +55,7 @@ window#waybar > *:last-child {
 }
 
 #language {
+  color: white;
   background-color: transparent;
 }
 
