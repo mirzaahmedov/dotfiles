@@ -24,7 +24,7 @@ set $menu wofi | xargs swaymsg exec --
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # output * bg #ffffff solid_color
-output * bg /home/mirzaahmedov/.system/wallpaper/catppuccin_02.png fill
+output * bg /home/mirzaahmedov/.system/wallpapers/wallpaper_01.jpg fill
 # output HDMI-A-1 resolution 1920x1080 position 0 0
 # output VGA-1 resolution --custom 1920x1080 position 1920 0
 #

@@ -121,8 +121,4 @@
       "format": "",
       "on-click": "$HOME/.config/waybar/powermenu.sh"
     },
-    "custom/launcher": {
-      "format": "<big></big>  Menu",
-      "on-click": "wofi",
-    }
 }

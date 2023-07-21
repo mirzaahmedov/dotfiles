@@ -1,14 +1,7 @@
 return {
 -- VimBeGood
 'ThePrimeagen/vim-be-good',
-
--- ColorBuddy
--- 'tjdevries/colorbuddy.nvim',
--- 'svrana/neosolarized.nvim',
--- Packer can manage itself
--- 'wbthomason/packer.nvim',
--- CSS colors
--- 'ap/vim-css-color',
+"nyoom-engineering/oxocarbon.nvim",
 
 -- Rose Pine color scheme
 { 'rose-pine/neovim', name = 'rose-pine' },
@@ -17,21 +10,7 @@ return {
 'github/copilot.vim',
 
 -- NightFox color scheme
--- 'EdenEast/nightfox.nvim',
--- Sonokai color scheme
--- 'sainnhe/sonokai',
--- Edge color scheme
--- 'sainnhe/edge',
---   -- Darcula color scheme
--- 'doums/darcula',
---   -- Tokyodark color scheme
--- 'tiagovla/tokyodark.nvim',
---   -- Vscode color scheme
--- 'Mofiqul/vscode.nvim',
---   -- One dark color scheme
--- 'navarasu/onedark.nvim',
---   -- Nebulous color scheme
--- 'Yagua/nebulous.nvim',
+'EdenEast/nightfox.nvim',
 
 -- Comments
 {
@@ -46,7 +25,6 @@ return {
 -- Nerd Tree
 'preservim/nerdtree',
 'johnstef99/vim-nerdtree-syntax-highlight',
-'ryanoasis/vim-devicons',
 
 -- Post-install/update hook with neovim command
 { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
@@ -99,5 +77,5 @@ return {
 'sbdchd/neoformat',
 
 -- dev icons
--- 'nvim-tree/nvim-web-devicons',
+'nvim-tree/nvim-web-devicons',
 }
