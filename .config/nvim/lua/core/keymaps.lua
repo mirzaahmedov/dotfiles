@@ -8,8 +8,8 @@ vim.keymap.set('i', ';j', '<Esc>')
 vim.api.nvim_set_keymap("i", ";k", 'copilot#Accept("<CR>")', { silent = true, expr = true })
 
 -- nerdtree
-vim.keymap.set('n', '<leader>e', ':NERDTreeToggle<CR>')
-vim.keymap.set('n', '<C-n>', ':NERDTreeFocus<CR>')
+vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>')
+vim.keymap.set('n', '<leader>n', ':NvimTreeFocus<CR>')
 
 -- sort lines
 vim.keymap.set('v', '<leader>ls', ':\'<,\'>! awk \'{ print length, $0 }\' | sort -n | cut -d" " -f2-<CR>')

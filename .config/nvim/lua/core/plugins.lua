@@ -1,7 +1,7 @@
 return {
 -- VimBeGood
 'ThePrimeagen/vim-be-good',
-"nyoom-engineering/oxocarbon.nvim",
+'nyoom-engineering/oxocarbon.nvim',
 
 -- Rose Pine color scheme
 { 'rose-pine/neovim', name = 'rose-pine' },
@@ -22,9 +22,8 @@ return {
 -- 'JoosepAlviste/nvim-ts-context-commentstring',
 'mxw/vim-jsx',
 
--- Nerd Tree
-'preservim/nerdtree',
-'johnstef99/vim-nerdtree-syntax-highlight',
+'nvim-tree/nvim-tree.lua',
+'nvim-tree/nvim-web-devicons',
 
 -- Post-install/update hook with neovim command
 { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
@@ -77,5 +76,5 @@ return {
 'sbdchd/neoformat',
 
 -- dev icons
-'nvim-tree/nvim-web-devicons',
+-- 'nvim-tree/nvim-web-devicons',
 }
