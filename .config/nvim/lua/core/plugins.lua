@@ -1,6 +1,9 @@
 return {
--- VimBeGood
+-- Primagen plugins
+'ThePrimeagen/harpoon',
 'ThePrimeagen/vim-be-good',
+
+-- Oxocarbon color scheme
 'nyoom-engineering/oxocarbon.nvim',
 
 -- Rose Pine color scheme
@@ -64,7 +67,7 @@ return {
 },
 
 -- split windows
--- 'christoomey/vim-tmux-navigator',
+'christoomey/vim-tmux-navigator',
 -- 'szw/vim-maximizer',
 'tpope/vim-surround',
 
@@ -74,7 +77,4 @@ return {
 
 -- prettier extension
 'sbdchd/neoformat',
-
--- dev icons
--- 'nvim-tree/nvim-web-devicons',
 }

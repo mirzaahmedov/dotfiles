@@ -1,105 +1,76 @@
-@import "colors.css";
-
 * {
-  font-family: "Inconsolata", "FontAwesome 6 Free Solid", sans-serif;
-  font-size: 16px;
-  min-height: 0;
+	font-size: 12px;
+	font-family: monospace;
+	font-weight: bold;
 }
 
 window#waybar {
-  background: transparent;
+	background: #292b2e;
+	color: #fdf6e3;
 }
 
-window#waybar > *:last-child {
-  margin-right: 7px;
+#custom-right-arrow-dark,
+#custom-left-arrow-dark {
+	color: #1a1a1a;
+}
+#custom-right-arrow-light,
+#custom-left-arrow-light {
+	color: #292b2e;
+	background: #1a1a1a;
 }
 
-#workspaces {
-  border-radius: 2rem;
-  background-color: rgba(0, 0, 0, 0.6);
-  margin: 7px 0px;
-  padding: 0px 10px;
+#workspaces,
+#clock.1,
+#clock.2,
+#clock.3,
+#pulseaudio,
+#memory,
+#cpu,
+#battery,
+#disk,
+#tray {
+	background: #1a1a1a;
 }
 
 #workspaces button {
-  border-radius: 1rem;
-  padding-left: 10px;
-  margin: 5px 0;
-  box-shadow: inset 0 -3px transparent;
-  transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.68);
-  background-color: transparent;
+	padding: 0 2px;
+	color: #fdf6e3;
 }
-
 #workspaces button.focused {
-  color: @teal;
-  border-radius: 1rem;
+	color: #268bd2;
 }
 #workspaces button:hover {
-  color: @lavender;
-  border-radius: 1rem;
+	box-shadow: inherit;
+	text-shadow: inherit;
 }
-
-#tray,
-#network,
-#backlight,
-#clock,
-#battery,
-#pulseaudio,
-#language,
-#custom-lock,
-#custom-powermenu {
-  background-color: rgba(0, 0, 0, 0.6);
-  margin: 7px 0px;
-  padding: 10px 15px;
-  border-radius: 2rem;
-}
-
-#language {
-  color: white;
-  background-color: transparent;
-}
-
-#clock {
-  color: @lavender;
-}
-
-#battery {
-  color: @mint;
-}
-
-#battery.charging {
-  color: @mint;
-}
-
-#battery.warning:not(.charging) {
-  color: @yellow;
-}
-
-#network {
-  color: @green;
-}
-
-#backlight {
-  color: @yellow;
+#workspaces button:hover {
+	background: #1a1a1a;
+	border: #1a1a1a;
+	padding: 0 3px;
 }
 
 #pulseaudio {
-  color: @cyan;
+	color: #268bd2;
+}
+#memory {
+	color: #2aa198;
+}
+#cpu {
+	color: #6c71c4;
+}
+#battery {
+	color: #859900;
+}
+#disk {
+	color: #b58900;
 }
 
-#pulseaudio.muted {
-  color: @red;
+#clock,
+#pulseaudio,
+#memory,
+#cpu,
+#battery,
+#disk {
+	padding: 0 10px;
 }
 
-#custom-powermenu {
-  color: @yellow;
-}
-
-tooltip {
-  background: @base;
-  border: 1px solid @pink;
-}
-
-tooltip label {
-  color: @text;
-}

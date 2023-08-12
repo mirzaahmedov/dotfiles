@@ -1,124 +1,138 @@
+// -*- mode: json -*-
+
 {
-    "layer": "top",
-    "position": "top",
-    "height": 30,
-    "spacing": 7,
-    "fixed-center": false,
-    "modules-left": [],
-    "modules-center": ["sway/workspaces", "sway/mode"],
-    "modules-right": ["tray", "keyboard-state", "sway/language", "pulseaudio", "network",  "battery", "clock", "custom/powermenu"],
-    "sway/workspaces": {
-      "disable-scroll": true,
-      "all-outputs": false,
-      "format": "<big>{icon}</big> #{name}", 
-      "format-icons": {
-        "1": "󰅭",
-        "2": "",
-        "3": "",
-        "4": "",
-        "urgent": "",
-        "default": "",
-      },
-    },
+	"layer": "top",
+	"position": "top",
 
-    "idle_inhibitor": {
-      "format": "{icon}",
-      "format-icons": {
-        "activated": "",
-        "deactivated": ""
-      }
-    },
+	"modules-left": [
+		"sway/workspaces",
+		"custom/right-arrow-dark"
+	],
+	"modules-center": [
+		"custom/left-arrow-dark",
+		"clock#1",
+		"custom/left-arrow-light",
+		"custom/left-arrow-dark",
+		"clock#2",
+		"custom/right-arrow-dark",
+		"custom/right-arrow-light",
+		"clock#3",
+		"custom/right-arrow-dark"
+	],
+	"modules-right": [
+		"custom/left-arrow-dark",
+		"pulseaudio",
+		"custom/left-arrow-light",
+		"custom/left-arrow-dark",
+		"memory",
+		"custom/left-arrow-light",
+		"custom/left-arrow-dark",
+		"cpu",
+		"network",
+		"custom/left-arrow-light",
+		"custom/left-arrow-dark",
+		"battery",
+		"custom/left-arrow-light",
+		"custom/left-arrow-dark",
+		"custom/left-arrow-light",
+		"custom/left-arrow-dark",
+		"backlight",
+		"tray"
+	],
 
-    "sway/mode": {
-      "format": "<span style=\"italic\">{}</span>"
-    },
-    "keyboard-state": {
-        "capslock": true,
-        "format": {
-            "capslock": "{icon}",
-        },
-        "format-icons": {
-            "unlocked": "",
-            "locked": "󰪛 "
-        }
-    },
-    "sway/language": {
-      "format": "{long}",
-      "on-click": "swaymsg input type:keyboard xkb_switch_layout next",
-      "format-flags": {
-        "ru": "󱌭",
-        "en": "󱌯",
-      }
-    },
-    "tray": {
-      "icon-size": 18,
-      "spacing": 4
-    },
-    "clock": {
-      // Human Friendly
-      "format": " {:%H:%M %p}",
-      // 24hr Robot Friendly
-      "format-alt": "{:%Y/%m/%d}"
-    },
-    "cpu": {
-      "format": "",
-      "formal-alt": " {usage}%",
-      "on-click": "kitty -e bpytop"
-    },
+	"custom/left-arrow-dark": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/left-arrow-light": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/right-arrow-dark": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/right-arrow-light": {
+		"format": "",
+		"tooltip": false
+	},
 
-    "memory": {
-      "interval": 30,
-      "format": " {used:0.1f}/{total:0.1f}G"
-    },
+	"sway/workspaces": {
+		"disable-scroll": true,
+		"format": "{name}"
+	},
 
-    "network": {
-      // "interface": "wlp2s0", // (Optional) To force the use of this interface
-      "format-wifi": " ({signalStrength}%)",
-      "format-ethernet": "",
-      "tooltip-format-ethernet": "{bandwidthTotalBytes}",
-      "format-disconnected": "⚠ Disconnected" 
-    },
-    "pulseaudio": {
-      //"scroll-step": 1,
-      "format": "{icon} {volume}%",
-      "format-bluetooth": "{icon} {volume}%",
-      "format-muted": "",
-      "format-icons": {
-        "headphones": "",
-        "handsfree": "",
-        "headset": "",
-        "phone": "",
-        "portable": "",
-        "car": "",
-        "default": ["", ""]
-      },
-      "on-click": "pavucontrol"
-    },
-    "battery": {
-      "bat": "BAT0",
-      "interval": 60,
-      "states": {
-        "warning": 30,
-        "critical": 15,
-      },
-      "format": "{icon} {capacity}%",
-      "format-charging": " {capacity}%",
-      "format-plugged": " {capacity}%",
-      "format-icons": ["", "", "", "", ""],
-      "max-length": 25
-    },
-    "custom/music": {
-      "format": "  {}",
-      "max-length": 60,
-      "interval": 5, // Remove this if your script is endless and write in loop
-      "exec": "$HOME/.config/waybar/mediaplayer.sh 2> /dev/null", // Script in resources folder
-      "tooltip": false,
-      "on-click": "playerctl play-pause",
-      "on-scroll-up": "playerctl previous",
-      "on-scroll-down": "playerctl next"
-    },
-    "custom/powermenu": {
-      "format": "",
-      "on-click": "$HOME/.config/waybar/powermenu.sh"
-    },
+	"clock#1": {
+		"format": "{:%a}",
+		"tooltip": false
+	},
+	"clock#2": {
+		"format": "{:%H:%M}",
+		"tooltip": false
+	},
+	"clock#3": {
+		"format": "{:%m-%d}",
+		"tooltip": false
+	},
+
+	"pulseaudio": {
+		"format": "{icon} {volume:2}%",
+		"format-bluetooth": "{icon}  {volume}%",
+		"format-muted": "MUTE",
+		"format-icons": {
+			"headphones": "",
+			"default": [
+				"",
+				""
+			]
+		},
+		"scroll-step": 5,
+		"on-click": "pavucontrol",
+		"on-click-right": "pamixer -t"	
+	},
+	"memory": {
+		"interval": 5,
+		"format": "Mem {}%"
+	},
+	"cpu": {
+		"interval": 5,
+		"on-click": "emacsclient -c -e '(proced)'",
+		"format": "CPU {usage:2}%"
+	},
+	"battery": {
+		"states": {
+			"good": 95,
+			"warning": 30,
+			"critical": 15
+		},
+		"format": "{icon} {capacity}%",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+		]
+	},
+	"tray": {
+		"icon-size": 20
+	},
+	"network": {
+		"interface": "wlp6s0",
+		"format": "{ifname}",
+		"format-wifi": "({signalStrength}%) ",
+		"format-ethernet": "{ifname} ",
+		"format-disconnected": "", //An empty format will hide the module.
+		"tooltip-format": "{ifname}",
+		"tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+		"tooltip-format-ethernet": "{ifname} ",
+		"tooltip-format-disconnected": "Disconnected",
+		"on-click": "emacsclient -c -e '(view-file \"~/Documents/tech-personal-notes/nmcli-help.org\")'",
+		"max-length": 50
+	},
+	"backlight": {
+	    	"device": "intel_backlight",
+	        "format": "{percent}% {icon}",
+		"format-icons": ["", ""]
+		}
 }

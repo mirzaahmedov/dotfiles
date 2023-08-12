@@ -71,9 +71,9 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-if [ -f ~/.zsh-options ]
+if [ -f ~/.config/zsh/zsh-options ]
 then
-	source ~/.zsh-options
+	source ~/.config/zsh/zsh-options
 fi
 
 source $ZSH/oh-my-zsh.sh
@@ -113,7 +113,9 @@ case ":$PATH:" in
 esac
 # pnpm end
 
-if [ -f ~/.zsh-aliases ]
+bindkey -v
+
+if [ -f ~/.config/zsh/zsh-aliases ]
 then
-	source ~/.zsh-aliases
+	source ~/.config/zsh/zsh-aliases
 fi
