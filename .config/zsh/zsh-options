@@ -1,0 +1,8 @@
+bindkey -M viins ';j' vi-cmd-mode
+bindkey -v
+
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
+
+if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
+sway
+fi
