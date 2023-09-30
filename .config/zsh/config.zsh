@@ -19,6 +19,8 @@ alias vim='nvim'
 
 alias pn='pnpm'
 
+alias gitacp='gitacp.sh' 
+
 export EDITOR=nvim 
 export VISUAL=nvim
 

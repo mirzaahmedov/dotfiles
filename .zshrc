@@ -109,5 +109,3 @@ then
 fi
 
 
-# bun completions
-[ -s "/home/mirzaahmedov/.bun/_bun" ] && source "/home/mirzaahmedov/.bun/_bun"
