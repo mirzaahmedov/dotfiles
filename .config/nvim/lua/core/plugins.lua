@@ -3,6 +3,15 @@ return {
 'ThePrimeagen/harpoon',
 'ThePrimeagen/vim-be-good',
 
+-- OneDark color scheme
+{
+  'navarasu/onedark.nvim',
+  config = function()
+    require("onedark").setup {
+      style = "cool",
+    }
+  end
+},
 -- Oxocarbon color scheme
 'nyoom-engineering/oxocarbon.nvim',
 

@@ -71,12 +71,11 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-if [ -f ~/.config/zsh/zsh-options ]
-then
-	source ~/.config/zsh/zsh-options
-fi
+
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
+
 
 # User configuration
 
@@ -104,18 +103,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-
-# pnpm
-export PNPM_HOME="/home/mirzaahmedov/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-
-bindkey -v
-
-if [ -f ~/.config/zsh/zsh-aliases ]
+if [ -f ~/.config/zsh/config.zsh ]
 then
-	source ~/.config/zsh/zsh-aliases
+	source ~/.config/zsh/config.zsh
 fi
+
+
+# bun completions
+[ -s "/home/mirzaahmedov/.bun/_bun" ] && source "/home/mirzaahmedov/.bun/_bun"
