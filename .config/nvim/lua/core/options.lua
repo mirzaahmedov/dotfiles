@@ -39,11 +39,10 @@ vim.opt.colorcolumn = "100"
 -- format on save
 vim.cmd "autocmd BufWritePre * Neoformat"
 
--- OneDark colorscheme
--- require('onedark').setup{
---   style = 'warm',
--- }
--- require('onedark').load()
+require('onedark').setup{
+  style = 'warm',
+}
+require('onedark').load()
 
 -- Edge colorscheme
 -- vim.g.edge_style = 'aura'
@@ -65,4 +64,4 @@ vim.cmd "autocmd BufWritePre * Neoformat"
 -- }
 
 vim.opt.background = 'dark'
-vim.cmd "colorscheme oxocarbon"
+-- vim.cmd "colorscheme oxocarbon"
