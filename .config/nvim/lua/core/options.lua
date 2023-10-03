@@ -1,3 +1,5 @@
+vim.g.neoformat_enabled_sql = {"pg_format"}
+
 vim.g.mapleader = ","
 
 vim.g.NERDTreeShowLineNumbers = 1
