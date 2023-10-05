@@ -24,7 +24,8 @@ set $menu wofi | xargs swaymsg exec --
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # output * bg #ffffff solid_color
-output * bg /home/mirzaahmedov/.system/wallpapers/wallpaper_01.jpg fill
+# output * bg /home/mirzaahmedov/.system/wallpapers/wallpaper_01.jpg fill
+exec_always $HOME/.scripts/set-wallpaper.sh
 # output HDMI-A-1 resolution 1920x1080 position 0 0
 # output VGA-1 resolution --custom 1920x1080 position 1920 0
 #
@@ -250,12 +251,15 @@ xwayland enable
 exec_always $HOME/import-gsettings.sh
 
 # run stretchly in background
-exec_always stretchly &
+exec_always stretchly & 
+exec_always batsignal &
 
-# run chrome in workspace 1
+# attach some apps to the specific workspaces
 assign [app_id="Alacritty"] workspace number 1
 assign [class="Brave-browser"] workspace number 2
 assign [app_id="org.telegram.desktop"] workspace number 3
+
+for_window [class="feh"] fullscreen
 
 input {
   2:8:AlpsPS/2_ALPS_DualPoint_Stick events disabled

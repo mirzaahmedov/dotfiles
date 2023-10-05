@@ -1,2 +1,8 @@
-set hidden
+set icons
 set relativenumber
+
+cmd open_image ${{ feh $f }}
+cmd wallpaper ${{ $HOME/.scripts/set-wallpaper.sh $f }}
+
+map o open_image
+map sw wallpaper
