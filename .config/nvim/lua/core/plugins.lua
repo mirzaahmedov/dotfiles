@@ -3,6 +3,12 @@ return {
 'ThePrimeagen/harpoon',
 'ThePrimeagen/vim-be-good',
 
+-- Lua snippets
+{
+	"L3MON4D3/LuaSnip",
+        build = "make install_jsregexp"
+},
+
 -- OneDark color scheme
 {
   'navarasu/onedark.nvim',

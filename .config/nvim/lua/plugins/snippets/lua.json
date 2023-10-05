@@ -1,0 +1,7 @@
+{
+  "Some snippet": {
+    "prefix": "some",
+    "body": ["something"],
+    "description": "Some snippet"
+  }
+}

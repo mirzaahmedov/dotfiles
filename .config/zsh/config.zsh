@@ -23,6 +23,7 @@ alias gitacp='gitacp.sh'
 
 export EDITOR=nvim 
 export VISUAL=nvim
+export OPENER=xdg-open
 
 export PATH="$HOME/go/bin:$PATH"
 export PATH="$HOME/.scripts:$PATH"
