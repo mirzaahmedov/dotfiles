@@ -7,6 +7,7 @@ vim.g.NERDTreeShowLineNumbers = 1
 vim.g.neoformat_only_msg_on_error = 1
 
 -- line numbers
+vim.opt.list = true
 vim.opt.number = true
 vim.opt.relativenumber = true
 

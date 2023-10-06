@@ -8,4 +8,7 @@ require('plugins.telescope')
 require('plugins.nvim-tree')
 require('plugins.lua-snip')
 
+require('user.hello')
+require('user.test_go')
+
 highlight = { enable = true, disable = { "css" } }
