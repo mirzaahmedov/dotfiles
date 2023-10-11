@@ -1,0 +1,73 @@
+{
+  "sway/workspaces": {
+    "disable-scroll": true,
+    "format": "{name}"
+  },
+
+  "clock#weekday": {
+    "format": "{:%a}",
+    "tooltip": false
+  },
+  "clock#time": {
+    "format": "{:%H:%M}",
+    "tooltip": false
+  },
+  "clock#date": {
+    "format": "{:%m-%d}",
+    "tooltip": false
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume:2}%",
+    "format-bluetooth": "{icon}  {volume}%",
+    "format-muted": "MUTE",
+    "format-icons": {
+      "headphones": "",
+      "default": ["", ""]
+    },
+    "scroll-step": 5,
+    "on-click": "pavucontrol",
+    "on-click-right": "pamixer -t"
+  },
+  "memory": {
+    "interval": 5,
+    "format": "Mem {}%"
+  },
+  "cpu": {
+    "interval": 5,
+    "on-click": "emacsclient -c -e '(proced)'",
+    "format": "CPU {usage:2}%"
+  },
+  "network": {
+    "interface": "wlp2s0",
+    "format": "{ifname}",
+    "format-wifi": "({signalStrength}%) ",
+    "format-ethernet": "{ifname} ",
+    "format-disconnected": "", //An empty format will hide the module.
+    "tooltip-format": "{ifname}",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+    "tooltip-format-ethernet": "{ifname} ",
+    "tooltip-format-disconnected": "Disconnected",
+    "on-click": "emacsclient -c -e '(view-file \"~/Documents/tech-personal-notes/nmcli-help.org\")'",
+    "max-length": 50
+  },
+  "battery": {
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-icons": ["", "", "", "", ""]
+  },
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "{percent}% {icon}",
+    "format-icons": ["", ""]
+  },
+  "tray": {
+    "icon-size": 20,
+    "spacing": 5,
+    "reverse-direction": true
+  },
+}
