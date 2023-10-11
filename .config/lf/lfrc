@@ -6,3 +6,12 @@ cmd wallpaper ${{ $HOME/.scripts/set-wallpaper.sh $f }}
 
 map o open_image
 map sw wallpaper
+map gc cd ~/.config
+map gs cd ~/.system
+map gw cd ~/.system/wallpapers
+map gx cd ~/code
+map gl cd ~/code/leetcode
+map gp cd ~/code/projects
+map go cd ~/code/projects/go
+map gf cd ~/files
+map gd cd ~/files/downloads
