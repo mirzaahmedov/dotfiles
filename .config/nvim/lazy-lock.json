@@ -30,6 +30,7 @@
   "vim-airline-themes": { "branch": "master", "commit": "dd81554c2231e438f6d0e8056ea38fd0e80ac02a" },
   "vim-be-good": { "branch": "master", "commit": "c290810728a4f75e334b07dc0f3a4cdea908d351" },
   "vim-jsx": { "branch": "master", "commit": "8879e0d9c5ba0e04ecbede1c89f63b7a0efa24af" },
+  "vim-styled-components": { "branch": "main", "commit": "75e178916fc3e61385350933a23055927f5f60b7" },
   "vim-surround": { "branch": "master", "commit": "3d188ed2113431cf8dac77be61b842acb64433d9" },
   "vim-tmux-navigator": { "branch": "master", "commit": "7db70e08ea03b3e4d91f63713d76134512e28d7e" }
 }

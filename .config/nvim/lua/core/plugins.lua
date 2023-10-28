@@ -91,4 +91,7 @@ return {
 
 -- prettier extension
 'sbdchd/neoformat',
+
+-- styled-components
+'styled-components/vim-styled-components'
 }
