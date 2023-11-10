@@ -879,4 +879,4 @@ shell:
 #print_events: false
 
 import:
-  - ~/.config/alacritty/colorschemes/oxocarbon.yml
+  - ~/.config/alacritty/themes/github_dark_dimmed.yml
