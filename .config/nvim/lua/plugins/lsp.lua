@@ -15,3 +15,4 @@ lsp.ensure_installed({ 'tsserver', 'eslint', 'lua_ls', 'gopls' })
 lsp.nvim_workspace()
 
 lsp.setup()
+
