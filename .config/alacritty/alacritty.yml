@@ -117,7 +117,6 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    # family: Caskaydia Cove NF SemiLight
     family: Red Hat Mono
 
     # The `style` can be specified to pick a specific face.
@@ -879,4 +878,4 @@ shell:
 #print_events: false
 
 import:
-  - ~/.config/alacritty/themes/github_dark_dimmed.yml
+  - ~/.config/alacritty/themes/gruvbox.yml
