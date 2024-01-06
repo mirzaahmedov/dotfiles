@@ -3,6 +3,10 @@ return {
 'ThePrimeagen/harpoon',
 'ThePrimeagen/vim-be-good',
 
+{ "ellisonleao/gruvbox.nvim", priority = 1000 , config = true, opts = ...},
+-- Color highlighter
+'norcalli/nvim-colorizer.lua',
+
 -- Lua snippets
 {
 	"L3MON4D3/LuaSnip",

@@ -1,9 +1,11 @@
 local ls = require "luasnip"
 
-local snippet = ls.snippet
+local s = ls.snippet
 local t = ls.text_node
 local i = ls.insert_node
--- local f = ls.function_node
+local f = ls.function_node
+
+local fmt = require "luasnip.extras.fmt".fmt
 
 ls.config.set_config {
   history = true,
@@ -11,28 +13,42 @@ ls.config.set_config {
   updateevents = "TextChanged,TextChangedI"
 }
 
--- local filename = function ()
---     return vim.fn.expand('%')
--- end
+local filename = function ()
+    return vim.fn.expand('%:t:r')
+end
 
 ls.add_snippets('go', {
-  snippet('iferr',{
+  s('iferr',{
     t({'if err != nil {', '\t'}),
     i(0,'return err'),
     t({'\t', '}', '\t'}),
   }),
-  snippet('iferrfn',{
+  s('iferrfn',{
     t({'if err := '}), i(1,'fn'), t({'(); err != nil {', '\t'}),
     i(0,'return err'),
     t({'\t', '}', '\t'}),
   }),
-  -- snippet('rfc',{
-  --   t({'const '}), f(filename, {}), t({'{', '\t'}),
-  --   t({'return ('}), t({'\t'}),
-  --   t({'<div>'}), i(0,f(filename, {})), t({'</div>'}), t({'\t'}),
-  --   t({')'}), t({'\t'}),
-  --   t({'}'}), t({'\t'}),
-  -- })
+})
+
+ls.add_snippets('typescriptreact', {
+s('rc', fmt([[
+type {}Props = {{
+  {}
+}}
+
+const {} = () => {{
+  return (
+    <div>{}</div>
+  )
+}}
+]], {
+  f(filename, {}),
+  i(1),
+  f(filename, {}),
+  i(0)
+}
+))
+
 })
 
 vim.keymap.set({"i"}, "<C-K>", function() ls.expand() end, {silent = true})

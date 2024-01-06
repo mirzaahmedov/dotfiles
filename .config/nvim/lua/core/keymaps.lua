@@ -3,6 +3,8 @@ vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
 vim.keymap.set('n', '<leader>/', 'gcc')
 vim.keymap.set('v', '<leader>/', 'gc')
 
+vim.keymap.set('t', '<C-X>', '<C-\\><C-N>')
+
 vim.keymap.set('i', ';j', '<Esc>')
 -- github copilot keymaps
 vim.api.nvim_set_keymap("i", ";k", 'copilot#Accept("<CR>")', { silent = true, expr = true })
@@ -47,6 +49,8 @@ vim.keymap.set('n', '<leader>tf', ':MaximizerToggle<CR>')
 
 -- rename symbols
 vim.keymap.set('n', '<leader>rn', ':lua vim.lsp.buf.rename()<CR>')
+
+
 
 -- oil.nvim
 -- vim.keymap.set("n", "-", require("oil").open, { desc = "Open parent directory" })
