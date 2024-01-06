@@ -24,7 +24,7 @@ return {
 { 'rose-pine/neovim', name = 'rose-pine' },
 
 -- Github copilot
-'github/copilot.vim',
+-- 'github/copilot.vim',
 
 -- NightFox color scheme
 'EdenEast/nightfox.nvim',
