@@ -117,7 +117,6 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    # family: Consolas
     family: Source Code Pro
 
     # The `style` can be specified to pick a specific face.

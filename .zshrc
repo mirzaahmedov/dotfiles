@@ -107,5 +107,3 @@ if [ -f ~/.config/zsh/config.zsh ]
 then
 	source ~/.config/zsh/config.zsh
 fi
-
-
