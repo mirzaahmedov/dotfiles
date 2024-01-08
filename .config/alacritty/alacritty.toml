@@ -1,0 +1,23 @@
+import = ["/home/mirzaahmedov/.config/alacritty/themes/themes/gruvbox_dark.toml"]
+
+[cursor]
+blink_interval = 750
+
+[cursor.style]
+blinking = "Always"
+
+[font]
+size = 20
+
+[font.normal]
+family = "SF Mono"
+
+[shell]
+program = "/bin/zsh"
+
+[window]
+opacity = 1.0
+
+[window.padding]
+x = 0
+y = 0
