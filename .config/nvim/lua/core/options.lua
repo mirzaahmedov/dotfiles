@@ -66,6 +66,6 @@ vim.cmd "autocmd BufWritePre * Neoformat"
 -- }
 
 vim.opt.background = 'dark'
-vim.cmd "colorscheme oxocarbon"
+vim.cmd "colorscheme rose-pine"
 
 highlight = { enable = true, disable = { "css" } }
