@@ -41,31 +41,6 @@ vim.opt.colorcolumn = "100"
 -- format on save
 vim.cmd "autocmd BufWritePre * Neoformat"
 
--- require('onedark').setup{
---   style = 'warm',
--- }
--- require('onedark').load()
-
--- Edge colorscheme
--- vim.g.edge_style = 'aura'
--- vim.g.edge_better_performance = 1
--- vim.cmd "colorscheme edge"
-
--- Nebulous colorscheme
--- require("nebulous").setup {
---   variant = "fullmoon",
---   disable = {
---     terminal_colors = true,
---   },
---   italic = {
---     comments   = false,
---     keywords   = true,
---     functions  = false,
---     variables  = true,
---   },
--- }
-
-vim.opt.background = 'dark'
-vim.cmd "colorscheme oxocarbon"
+vim.cmd "colorscheme rose-pine-main"
 
 highlight = { enable = true, disable = { "css" } }
