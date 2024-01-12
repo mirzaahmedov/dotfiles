@@ -10,7 +10,7 @@ blinking = "Always"
 size = 20
 
 [font.normal]
-family = "SF Mono"
+family = "Consolas"
 
 [shell]
 program = "/bin/zsh"

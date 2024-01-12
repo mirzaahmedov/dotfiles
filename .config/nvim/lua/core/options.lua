@@ -40,7 +40,6 @@ vim.opt.colorcolumn = "100"
 
 -- format on save
 vim.cmd "autocmd BufWritePre * Neoformat"
-
-vim.cmd "colorscheme rose-pine-main"
+vim.cmd "colorscheme rose-pine"
 
 highlight = { enable = true, disable = { "css" } }
