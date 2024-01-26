@@ -1,4 +1,4 @@
-import = ["/home/mirzaahmedov/.config/alacritty/alacritty-theme/themes/gruvbox_dark.toml"]
+import = ["/home/mirzaahmedov/.config/alacritty/themes/one_dark.toml"]
 
 [cursor]
 blink_interval = 750
@@ -10,7 +10,7 @@ blinking = "Always"
 size = 20
 
 [font.normal]
-family = "Consolas"
+family = "Inconsolata"
 
 [shell]
 program = "/bin/zsh"
