@@ -107,3 +107,10 @@ if [ -f ~/.config/zsh/config.zsh ]
 then
 	source ~/.config/zsh/config.zsh
 fi
+
+# bun completions
+[ -s "/home/mirzaahmedov/.bun/_bun" ] && source "/home/mirzaahmedov/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

@@ -76,9 +76,15 @@ exec_always $HOME/.scripts/set-wallpaper.sh
     # Kill focused window
     bindsym $mod+Shift+q kill
 
-    # Start your launcher
+    # Start your app launcher
     bindsym $mod+d exec $menu
+
+    # Start Powermenu
     bindsym $mod+Shift+s exec $HOME/.scripts/wofi-powermenu.sh
+
+    # Start project launcher
+    bindsym $mod+o exec $HOME/.scripts/launch-project.sh
+
     bindsym $mod+Shift+b exec brave
     bindsym $mod+Shift+t exec telegram-desktop
     bindsym $mod+Shift+r exec $term -e ranger

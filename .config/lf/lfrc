@@ -1,5 +1,6 @@
 set icons
 set relativenumber
+set hidden
 
 cmd open_image ${{ feh $f }}
 cmd wallpaper ${{ $HOME/.scripts/set-wallpaper.sh $f }}

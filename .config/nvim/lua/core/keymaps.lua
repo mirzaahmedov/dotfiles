@@ -7,14 +7,14 @@ vim.keymap.set('t', '<C-X>', '<C-\\><C-N>')
 
 vim.keymap.set('i', ';j', '<Esc>')
 -- github copilot keymaps
-vim.api.nvim_set_keymap("i", ";k", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+vim.api.nvim_set_keymap('i', ';k', 'copilot#Accept("<CR>")', { silent = true, expr = true })
 
 -- nerdtree
 vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>')
 vim.keymap.set('n', '<leader>n', ':NvimTreeFocus<CR>')
 
 -- sort lines
-vim.keymap.set('v', '<leader>ls', ':\'<,\'>! awk \'{ print length, $0 }\' | sort -n | cut -d" " -f2-<CR>')
+vim.keymap.set('v', '<leader>ls', ":'<,'>! awk '{ print length, $0 }' | sort -n | cut -d\" \" -f2-<CR>")
 
 -- clear search
 vim.keymap.set('n', '<leader>nh', ':nohl<CR>')
@@ -49,8 +49,6 @@ vim.keymap.set('n', '<leader>tf', ':MaximizerToggle<CR>')
 
 -- rename symbols
 vim.keymap.set('n', '<leader>rn', ':lua vim.lsp.buf.rename()<CR>')
-
-
 
 -- oil.nvim
 -- vim.keymap.set("n", "-", require("oil").open, { desc = "Open parent directory" })

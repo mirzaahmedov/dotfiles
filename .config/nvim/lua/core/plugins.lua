@@ -1,101 +1,88 @@
 return {
--- Primagen plugins
-'ThePrimeagen/harpoon',
-'ThePrimeagen/vim-be-good',
+  -- Primagen plugins
+  'ThePrimeagen/harpoon',
+  'ThePrimeagen/vim-be-good',
 
-{ "ellisonleao/gruvbox.nvim", priority = 1000 , config = true, opts = ...},
--- Color highlighter
-'norcalli/nvim-colorizer.lua',
+  { 'ellisonleao/gruvbox.nvim', priority = 1000, config = true, opts = ... },
+  -- Color highlighter
+  'norcalli/nvim-colorizer.lua',
 
--- Lua snippets
-{
-	"L3MON4D3/LuaSnip",
-},
+  -- Lua snippets
+  { 'L3MON4D3/LuaSnip' },
 
--- OneDark color scheme
-{
-  'navarasu/onedark.nvim',
-  config = function()
-    require("onedark").setup {
-      style = "cool",
-    }
-  end
-},
--- Oxocarbon color scheme
-'nyoom-engineering/oxocarbon.nvim',
+  { 'tjdevries/colorbuddy.nvim' },
+  { 'svrana/neosolarized.nvim' },
+  { 'navarasu/onedark.nvim' },
+  { 'nyoom-engineering/oxocarbon.nvim' },
+  { 'rose-pine/neovim', name = 'rose-pine' },
 
--- Rose Pine color scheme
-{ 'rose-pine/neovim', name = 'rose-pine' },
+  { 'EdenEast/nightfox.nvim' },
 
--- Github copilot
--- 'github/copilot.vim',
+  -- Comments
+  {
+    'numToStr/Comment.nvim',
+    config = function()
+      require('Comment').setup()
+    end,
+  },
+  -- 'JoosepAlviste/nvim-ts-context-commentstring',
+  'mxw/vim-jsx',
 
--- NightFox color scheme
-'EdenEast/nightfox.nvim',
+  'nvim-tree/nvim-tree.lua',
+  'nvim-tree/nvim-web-devicons',
 
--- Comments
-{
-  'numToStr/Comment.nvim',
-  config = function()
-    require('Comment').setup()
-  end
-},
--- 'JoosepAlviste/nvim-ts-context-commentstring',
-'mxw/vim-jsx',
+  -- Post-install/update hook with neovim command
+  { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
 
-'nvim-tree/nvim-tree.lua',
-'nvim-tree/nvim-web-devicons',
-
--- Post-install/update hook with neovim command
-{ 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
-
--- LSP setup
-{
+  -- LSP setup
+  {
     'VonHeikemen/lsp-zero.nvim',
     branch = 'v1.x',
     dependencies = {
       -- LSP Support
-      { 'neovim/nvim-lspconfig' },           -- Required
-      { 'williamboman/mason.nvim' },         -- Optional
+      { 'neovim/nvim-lspconfig' }, -- Required
+      { 'williamboman/mason.nvim' }, -- Optional
       { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
       -- Autocompletion
-      { 'hrsh7th/nvim-cmp' },       -- Required
-      { 'hrsh7th/cmp-nvim-lsp' },   -- Required
-      { 'hrsh7th/cmp-buffer' },     -- Optional
-      { 'hrsh7th/cmp-path' },       -- Optional
+      { 'hrsh7th/nvim-cmp' }, -- Required
+      { 'hrsh7th/cmp-nvim-lsp' }, -- Required
+      { 'hrsh7th/cmp-buffer' }, -- Optional
+      { 'hrsh7th/cmp-path' }, -- Optional
       { 'saadparwaiz1/cmp_luasnip' }, -- Optional
-      { 'hrsh7th/cmp-nvim-lua' },   -- Optional
+      { 'hrsh7th/cmp-nvim-lua' }, -- Optional
 
       -- Snippets
-      { 'L3MON4D3/LuaSnip' },           -- Required
+      { 'L3MON4D3/LuaSnip' }, -- Required
       { 'rafamadriz/friendly-snippets' }, -- Optional
-    }
+    },
   },
 
-{
-  "windwp/nvim-autopairs",
-  config = function() require("nvim-autopairs").setup {} end
-},
+  {
+    'windwp/nvim-autopairs',
+    config = function()
+      require('nvim-autopairs').setup {}
+    end,
+  },
 
-{
-  'nvim-telescope/telescope.nvim',
-  -- or                          , branch = '0.1.x',
-  dependencies = { { 'nvim-lua/plenary.nvim' } }
-},
+  {
+    'nvim-telescope/telescope.nvim',
+    -- or                          , branch = '0.1.x',
+    dependencies = { { 'nvim-lua/plenary.nvim' } },
+  },
 
--- split windows
-'christoomey/vim-tmux-navigator',
--- 'szw/vim-maximizer',
-'tpope/vim-surround',
+  -- split windows
+  'christoomey/vim-tmux-navigator',
+  -- 'szw/vim-maximizer',
+  'tpope/vim-surround',
 
--- status line
-'vim-airline/vim-airline',
-'vim-airline/vim-airline-themes',
+  -- status line
+  'vim-airline/vim-airline',
+  'vim-airline/vim-airline-themes',
 
--- prettier extension
-'sbdchd/neoformat',
+  -- prettier extension
+  'sbdchd/neoformat',
 
--- styled-components
-'styled-components/vim-styled-components'
+  -- styled-components
+  'styled-components/vim-styled-components',
 }

@@ -1,4 +1,4 @@
-import = ["/home/mirzaahmedov/.config/alacritty/themes/one_dark.toml"]
+import = ["/home/mirzaahmedov/.config/alacritty/themes/solarized_dark.toml"]
 
 [cursor]
 blink_interval = 750
@@ -7,10 +7,10 @@ blink_interval = 750
 blinking = "Always"
 
 [font]
-size = 20
+size = 18
 
 [font.normal]
-family = "Inconsolata"
+family = "Source Code Pro"
 
 [shell]
 program = "/bin/zsh"
@@ -19,5 +19,5 @@ program = "/bin/zsh"
 opacity = 1.0
 
 [window.padding]
-x = 0
+x = 10
 y = 0

@@ -1,6 +1,7 @@
-vim.g.neoformat_enabled_sql = {"pg_format"}
+vim.g.neoformat_enabled_sql = { 'pg_format' }
+-- vim.g.neoformat_enabled_lua = { 'stylua' }
 
-vim.g.mapleader = ","
+vim.g.mapleader = ','
 
 vim.g.NERDTreeShowLineNumbers = 1
 
@@ -36,10 +37,10 @@ vim.opt.termguicolors = true
 vim.g.copilot_no_tab_map = true
 
 -- max width indicator
-vim.opt.colorcolumn = "100"
+vim.opt.colorcolumn = '100'
 
 -- format on save
-vim.cmd "autocmd BufWritePre * Neoformat"
-vim.cmd "colorscheme rose-pine"
+vim.cmd 'autocmd BufWritePre * Neoformat'
+vim.cmd.colorscheme 'onedark'
 
-highlight = { enable = true, disable = { "css" } }
+vim.g.highlight = { enable = true, disable = { 'css' } }

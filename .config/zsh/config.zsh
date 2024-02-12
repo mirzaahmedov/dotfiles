@@ -8,6 +8,7 @@ alias la='ls --color -a'
 
 alias c='cd'
 alias cf='cd $(find -maxdepth 3 -type d | fzf)'
+alias csp='cd $HOME/code/projects/ && cd $(find -maxdepth 3 -type d -not -path "*/node_modules/*" -a -not -name "node_modules" -a -not -path "*/.git/*" -a -not -name ".git" | fzf)'
 
 alias pc='sudo pacman'
 alias pu='sudo pacman -Syyu'
@@ -20,10 +21,12 @@ alias vim='nvim'
 alias pn='pnpm'
 
 alias gitacp='gitacp.sh' 
+alias project='project.sh'
 
 export EDITOR=nvim 
 export VISUAL=nvim
 export OPENER=xdg-open
+export GOPATH="$HOME/go"
 
 export PATH="$HOME/go/bin:$PATH"
 export PATH="$HOME/.scripts:$PATH"
