@@ -12,3 +12,5 @@ require 'plugins.colorbuddy'
 require 'plugins.solarized'
 
 require 'user.test_go'
+
+require 'snippets.react'
