@@ -11,6 +11,5 @@ require 'plugins.tailwindcss'
 require 'plugins.colorbuddy'
 require 'plugins.solarized'
 
-require 'user.test_go'
-
 require 'snippets.react'
+require 'snippets.go'
