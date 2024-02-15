@@ -1,38 +1,37 @@
 
 #
 # Color definition
-#
 
-set $c1 #fd472f
-set $c2 #0FFF50
-set $c3 #99a2ea
-set $c4 #333142
-set $c5 #342f73
+set {
+	$pink		#ff79c6
+	$white		#ffffff
+	$cyan		#00afd7
+	$acqua		#00d787
+	$wine		#72003e
+	$magenta	#d33682
+	$orange		#ff8700
+	$silver		#e4e4e4
+	$elegant	#1b1d1e
+	$transparent	#FF000000
 
+        $base03    #002b36
+        $base02    #073642
+        $base01    #586e75
+        $base00    #657b83
+        $base0     #839496
+        $base1     #93a1a1
+        $base2     #eee8d5
+        $base3     #fdf6e3
+        $yellow    #b58900
+        $red       #dc322f
+        $violet    #6c71c4
+        $blue      #268bd2
+        $green     #859900
+}
 
-set $white #f4f4f8
-set $dark #333333
-set $dim #666666
-
-
-set $focused_bgcolor $c2
-set $focused_textcolor $dark
-set $focused_indicator $c3
-
-set $inactive_bgcolor $c5
-set $inactive_textcolor $white
-set $inactive_indicator $c5
-
-set $unfocused_bgcolor $c4
-set $unfocused_textcolor $dim
-set $unfocused_indicator $c5
-
-set $urgent_bgcolor $c1
-set $urgent_textcolor $c4
-set $urgent_indicator $c3
-
-client.focused $focused_bgcolor $focused_bgcolor $focused_textcolor $focused_indicator $focused_bgcolor
-client.focused_inactive $inactive_bgcolor $inactive_bgcolor $inactive_textcolor $inactive_indicator $inactive_bgcolor
-client.unfocused $unfocused_bgcolor $unfocused_bgcolor $unfocused_textcolor $unfocused_indicator $unfocused_bgcolor
-client.urgent $urgent_bgcolor $urgent_bgcolor $urgent_textcolor $urgent_indicator $urgent_bgcolor
+client.focused        	 	$elegant     $green		    $elegant	      $white        $green
+client.unfocused        	$elegant	   $elegant	      $green	      $white        $elegant
+client.focused_inactive 	$elegant     $elegant   	  $acqua	      	$green   	  $acqua
+client.urgent	          	$elegant	   $green       $silver	      	$green   	  $green
+client.placeholder	      $elegant     $green	      $silver	        $white	  	  $green
 

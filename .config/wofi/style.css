@@ -1,46 +1,32 @@
-@define-color base   #303446;
-@define-color mantle #292c3c;
-@define-color crust  #232634;
-
-@define-color text     #c6d0f5;
-@define-color subtext0 #a5adce;
-@define-color subtext1 #b5bfe2;
-
-@define-color surface0 #414559;
-@define-color surface1 #51576d;
-@define-color surface2 #626880;
-
-@define-color overlay0 #737994;
-@define-color overlay1 #838ba7;
-@define-color overlay2 #949cbb;
-
-@define-color blue      #8caaee;
-@define-color lavender  #babbf1;
-@define-color sapphire  #85c1dc;
-@define-color sky       #99d1db;
-@define-color teal      #81c8be;
-@define-color green     #a6d189;
-@define-color yellow    #e5c890;
-@define-color peach     #ef9f76;
-@define-color maroon    #ea999c;
-@define-color red       #e78284;
-@define-color mauve     #ca9ee6;
-@define-color pink      #f4b8e4;
-@define-color flamingo  #eebebe;
-@define-color rosewater #f2d5cf;
+@define-color base03 #002b36;
+@define-color base02 #073642;
+@define-color base01 #586e75;
+@define-color base00 #657b83;
+@define-color base0 #839496;
+@define-color base1 #93a1a1;
+@define-color base2 #eee8d5;
+@define-color base3 #fdf6e3;
+@define-color yellow #b58900;
+@define-color orange #cb4b16;
+@define-color red #dc322f;
+@define-color magenta #d33682;
+@define-color violet #6c71c4;
+@define-color blue #268bd2;
+@define-color cyan #2aa198;
+@define-color green #859900;
 
 window {
   border: none;
   background-color: transparent;
-  color: @text;
+  color: @base3;
 }
 
 #input {
   padding: 15px 10px;
   margin: 4px 4px 8px 4px;
   font-size: 30px;
-  background-color: @surface0;
-  color: @text;
+  background-color: @base00;
+  color: @base3;
   border: none;
   border-radius: 10px;
 }
@@ -49,13 +35,16 @@ window {
   border: none;
   outline: none;
 }
+#input::placeholder {
+  color: @green;
+}
 #input > image.left {
   min-width: 1.5em;
-  -gtk-icon-transform: scale(1.3);
+  -gtk-icon-transform: scale(1.5);
 }
 
 #outer-box {
-  background-color: @base;
+  background-color: @base01;
   border-radius: 10px;
 }
 
@@ -63,7 +52,7 @@ window {
   margin: 0 4px;
   padding: 14px;
   font-size: 14px;
-  color: @text;
+  color: @base3;
   outline: none;
   border: none;
   border-radius: 5px;
@@ -72,7 +61,7 @@ window {
   margin-right: 10px;
 }
 #entry:selected {
-  background-color: @surface0;
+  background-color: @base0;
 }
 
 #scroll {
@@ -80,8 +69,8 @@ window {
 }
 
 #text {
-  color: @text;
+  color: @base3;
 }
 #text:selected {
-  color: @blue;
+  color: @base3;
 }
